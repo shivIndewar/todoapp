@@ -3,13 +3,13 @@ while True:
     userInput = userInput.strip()
     match userInput:
         case "add":
-            todo = input("Enter task to add:") +"\n"
+            todo = input("Enter task to add:")
             # Read existing tasks
             with open('todos.txt', 'r') as file:
                 todos = file.readlines()
 
             # Add new task
-            todos.append(todo)
+            todos.append(todo+"\n")
 
             # Write everything back (overwrite file)
             with open('todos.txt', 'w') as file:
